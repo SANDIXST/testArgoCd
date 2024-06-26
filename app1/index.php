@@ -1,3 +1,3 @@
 <?php
-echo "Path1: " . $_SERVER['REQUEST_URI'];
+echo "Hello, World! Path: " . $_SERVER['REQUEST_URI'];
 ?>

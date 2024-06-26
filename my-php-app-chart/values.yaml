@@ -1,7 +1,7 @@
-replicaCount: 1
+replicaCount: 3
 
 image:
-  repository: sandixst/app1
+  repository: <ваш-докер-репозиторий>/my-php-app
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -13,9 +13,9 @@ ingress:
   enabled: true
   annotations: {}
   hosts:
-    - host: 
+    - host: ""
       paths:
-        - path: sandixst/app1
+        - path: /
           pathType: Prefix
   tls: []
 
@@ -23,6 +23,6 @@ resources: {}
 
 nodeSelector: {}
 
-tolerations: []
+tolerations: {}
 
 affinity: {}
