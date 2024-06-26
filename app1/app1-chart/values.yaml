@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: sandixst/app1
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - host: ""
+      paths:
+        - path: sandixst/app1
+          pathType: Prefix
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
