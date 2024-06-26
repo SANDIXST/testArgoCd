@@ -26,26 +26,4 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Common labels
 */}}
-{{- define "my-php-app-chart.labels" -}}
-helm.sh/chart: {{ include "my-php-app-chart.chart" . }}
-{{ include "my-php-app-chart.selectorLabels" . }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
-app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end -}}
-
-{{/*
-Selector labels
-*/}}
-{{- define "my-php-app-chart.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "my-php-app-chart.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-{{- end -}}
-
-{{/*
-Chart name and version as used by the chart label.
-*/}}
-{{- define "my-php-app-chart.chart" -}}
-{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
-{{- end -}}
+{{- define
