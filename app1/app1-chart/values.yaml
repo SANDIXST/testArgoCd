@@ -13,7 +13,7 @@ ingress:
   enabled: true
   annotations: {}
   hosts:
-    - host: ""
+    - host: 
       paths:
         - path: sandixst/app1
           pathType: Prefix
