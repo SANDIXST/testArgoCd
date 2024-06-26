@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: sandixst/app1
+  repository: sandixst/app1:latest
   tag: latest
   pullPolicy: IfNotPresent
 
