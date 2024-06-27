@@ -5,11 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: sandixst/app1
+  repository: sandixst/backend
   tag: latest
   pullPolicy: IfNotPresent
 
-containerPort: 80
+containerPort: 8080
 
 service:
   type: ClusterIP
@@ -45,3 +45,43 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+- name: DATABASE_URL
+  value: "postgresql://backendb_owner:dJbmQFPO5s0k@ep-dawn-sun-a2yo2boo.eu-central-1.aws.neon.tech/backend?sslmode=require"
+- name: STATIC_PATH
+  value: "../db/static"
+- name: SERVER_URL
+  value: "0.0.0.0:8080"
+- name: JWT_SECRET
+  value: "supersecretjwt"
+- name: HASH_SECRET
+  value: "supersecrethash"
+- name: KEY_COOKIE_SECRET
+  value: "fadfuhfahf840t9842h98t49hHOUEFSHUf09h498uhFh08f08whHOUfoh9hfa08htf"
+- name: PAGINATION_LIMIT_FILTERS_PRODUCTS
+  value: "15"
+- name: PAGINATION_LIMIT_SEARCH_PRODUCTS
+  value: "2"
+- name: ADMIN_PAGINATION_LIMIT
+  value: "30"
+- name: FILTERS_LIMIT_KEYS
+  value: "30"
+- name: FILTERS_LIMIT_VALUES
+  value: "30"
+- name: FILTERS_LIMIT_LETTERS
+  value: "30"
+- name: CACHE_DURATION_MIN
+  value: "0"
+- name: DATABASE_REDIS_URL
+  value: "redis://dragonfly:6379/"
+- name: ADMIN_TOKEN_EXPIRATION_DAYS
+  value: "7"
+- name: CLIENT_SESSION_EXPIRATION_DAYS
+  value: "14"
+- name: CLIENT_LIMIT_ORDERS_HOURS
+  value: "7"
+- name: CLIENT_LIMIT_ORDERS_COUNT
+  value: "100"
+- name: KAFKA_URL
+  value: "localhost:9092"
