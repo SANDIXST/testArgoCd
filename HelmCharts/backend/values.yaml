@@ -48,7 +48,7 @@ affinity: {}
 # env for backend
 env:
 - name: DATABASE_URL
-  value: "postgres://postgres:RvnLo5JwB8@my-postgresql/postgres"
+  value: "postgres://postgres:Jo9qLDpj76@my-postgresql/postgres"
 - name: STATIC_PATH
   value: "../db/static"
 - name: SERVER_URL
