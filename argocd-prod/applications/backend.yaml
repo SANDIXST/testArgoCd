@@ -8,7 +8,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: HelmCharts/backend/helm-guestbook
+    path: HelmCharts/backend
     repoURL: 'https://github.com/SANDIXST/testArgoCd.git'
     targetRevision: HEAD
     helm:
