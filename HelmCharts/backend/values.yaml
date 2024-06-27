@@ -82,7 +82,7 @@ env:
 - name: CLIENT_LIMIT_ORDERS_HOURS
   value: "7"
 - name: CLIENT_LIMIT_ORDERS_COUNT
-  value: "100"
+  value: "3"
 - name: KAFKA_URL
   value: "my-kafka:9092"
 - name: KAFKA_USERNAME
