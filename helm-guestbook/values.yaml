@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: sandixst/backend
-  tag: 0.0.1
+  tag: 0.0.2
   pullPolicy: IfNotPresent
 
 containerPort: 8080
@@ -85,3 +85,7 @@ env:
   value: "100"
 - name: KAFKA_URL
   value: "my-kafka:9092"
+- name: KAFKA_USERNAME
+  value: "user1"
+- name: KAFKA_PASSWORD
+  value: "iFhSyVIpwW"
