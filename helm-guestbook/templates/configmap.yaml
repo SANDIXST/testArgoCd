@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  DATABASE_URL: "postgresql://backendb_owner:dJbmQFPO5s0k@ep-dawn-sun-a2yo2boo.eu-central-1.aws.neon.tech/backend?sslmode=require"
+  STATIC_PATH: "../db/static"
+  SERVER_URL: "0.0.0.0:8080"
+  JWT_SECRET: "supersecretjwt"
+  HASH_SECRET: "supersecrethash"
+  KEY_COOKIE_SECRET: "fadfuhfahf840t9842h98t49hHOUEFSHUf09h498uhFh08f08whHOUfoh9hfa08htf"
+  PAGINATION_LIMIT_FILTERS_PRODUCTS: "15"
+  PAGINATION_LIMIT_SEARCH_PRODUCTS: "2"
+  ADMIN_PAGINATION_LIMIT: "30"
+  FILTERS_LIMIT_KEYS: "30"
+  FILTERS_LIMIT_VALUES: "30"
+  FILTERS_LIMIT_LETTERS: "30"
+  CACHE_DURATION_MIN: "0"
+  DATABASE_REDIS_URL: "redis://dragonfly:6379/"
+  ADMIN_TOKEN_EXPIRATION_DAYS: "7"
+  CLIENT_SESSION_EXPIRATION_DAYS: "14"
+  CLIENT_LIMIT_ORDERS_HOURS: "7"
+  CLIENT_LIMIT_ORDERS_COUNT: "100"
+  KAFKA_URL: "localhost:9092"
