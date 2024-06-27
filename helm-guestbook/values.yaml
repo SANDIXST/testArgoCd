@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: sandixst/hello-helm
+  repository: sandixst/backend
   tag: latest
   pullPolicy: IfNotPresent
 

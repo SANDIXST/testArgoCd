@@ -25,8 +25,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: MY_ENV_VAR
-              value: "helloworld"
+            - name: DATABASE_URL
+              value: "postgresql://backendb_owner:dJbmQFPO5s0k@ep-dawn-sun-a2yo2boo.eu-central-1.aws.neon.tech/backend?sslmode=require"
           ports:
             - name: http
               containerPort: {{ .Values.containerPort }}
