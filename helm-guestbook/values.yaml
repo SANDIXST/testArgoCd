@@ -84,4 +84,4 @@ env:
 - name: CLIENT_LIMIT_ORDERS_COUNT
   value: "100"
 - name: KAFKA_URL
-  value: "localhost:9092"
+  value: "my-kafka:9092"
