@@ -24,9 +24,9 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          envFrom:
-            - configMapRef:
-                name: backend-config
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://backendb_owner:dJbmQFPO5s0k@ep-dawn-sun-a2yo2boo.eu-central-1.aws.neon.tech/backend?sslmode=require"
           ports:
             - name: http
               containerPort: {{ .Values.containerPort }}
