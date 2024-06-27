@@ -45,10 +45,10 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
+# env for backend
 env:
 - name: DATABASE_URL
-  value: "postgresql://backendb_owner:dJbmQFPO5s0k@ep-dawn-sun-a2yo2boo.eu-central-1.aws.neon.tech/backend?sslmode=require"
+  value: "postgres://postgres:RvnLo5JwB8@my-postgresql/postgres"
 - name: STATIC_PATH
   value: "../db/static"
 - name: SERVER_URL
